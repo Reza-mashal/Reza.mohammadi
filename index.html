@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+    <header>
+        <h1>🌤️ وضعیت آب و هوا</h1>
+        <button class="menu">☰</button>
+    </header>
+
+    <!-- Main Weather -->
+    <section class="weather">
+
+        <!-- Search -->
+        <div class="search">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="نام شهر را وارد کنید..."
+                autocomplete="off"
+            >
+
+            <button onclick="searchWeather()">
+                جستجو
+            </button>
+        </div>
+
+        <!-- City -->
+        <h2 id="city">کابل</h2>
+
+        <!-- Date -->
+        <p class="date" id="date"></p>
+
+        <!-- Current Weather -->
+        <div class="main-weather">
+
+            <div class="icon" id="icon">
+                ☀️
+            </div>
+
+            <div class="temperature">
+
+                <div id="temp">
+                    --°C
+                </div>
+
+                <p id="condition">
+                    وضعیت هوا
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Details -->
+        <div class="details">
+
+            <span>
+                بیشترین:
+                <b id="high">--°C</b>
+            </span>
+
+            <span>
+                کمترین:
+                <b id="low">--°C</b>
+            </span>
+
+            <span>
+                رطوبت:
+                <b id="humidity">--%</b>
+            </span>
+
+            <span>
+                باد:
+                <b id="wind">-- km/h</b>
+            </span>
+
+        </div>
+
+        <!-- Forecast -->
+        <section class="forecast">
+
+            <h2>پیش‌بینی هوا</h2>
+
+            <div class="days">
+
+                <div class="day">
+                    <b>---</b>
+                    <span>🌤️</span>
+                    <strong>--° --°</strong>
+                </div>
+
+                <div class="day">
+                    <b>---</b>
+                    <span>🌤️</span>
+                    <strong>--° --°</strong>
+                </div>
+
+                <div class="day">
+                    <b>---</b>
+                    <span>🌤️</span>
+                    <strong>--° --°</strong>
+                </div>
+
+                <div class="day">
+                    <b>---</b>
+                    <span>🌤️</span>
+                    <strong>--° --°</strong>
+                </div>
+
+                <div class="day">
+                    <b>---</b>
+                    <span>🌤️</span>
+                    <strong>--° --°</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Information -->
+        <section class="information">
+
+            <div class="info-box">
+
+                <div class="info-icon">
+                    💧
+                </div>
+
+                <div>
+                    <p>رطوبت</p>
+                    <strong id="humidity2">--%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="info-box wind-box">
+
+                <div class="info-icon">
+                    💨
+                </div>
+
+                <div>
+                    <p>سرعت باد</p>
+                    <strong id="wind2">-- km/h</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

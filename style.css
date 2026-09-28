@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        to bottom,
+        #1689dc,
+        #66c9ed,
+        #1598dc
+    );
+
+    color: white;
+}
+
+.app {
+    width: 920px;
+    max-width: 94%;
+    margin: 45px auto;
+}
+
+/* Header */
+
+header {
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    background: linear-gradient(
+        135deg,
+        #1265c9,
+        #1979da
+    );
+
+    border-radius: 28px 28px 0 0;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 42px;
+}
+
+.menu {
+    border: none;
+    background: transparent;
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+/* Main Weather */
+
+.weather {
+    padding: 25px 50px 45px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        rgba(71, 178, 235, 0.9),
+        rgba(30, 120, 207, 0.8)
+    );
+
+    border-radius: 0 0 28px 28px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Search */
+
+.search {
+    display: flex;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    gap: 8px;
+}
+
+.search input {
+    flex: 1;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    outline: none;
+
+    direction: rtl;
+}
+
+.search button {
+    border: none;
+
+    padding: 0 22px;
+
+    border-radius: 10px;
+
+    background: #1265c9;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search button:hover {
+    background: #0c4fa0;
+}
+
+/* City */
+
+.weather h2 {
+    font-size: 50px;
+
+    margin-top: 15px;
+}
+
+/* Date */
+
+.date {
+    font-size: 24px;
+
+    margin: 8px 0 25px;
+}
+
+/* Main weather */
+
+.main-weather {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 45px;
+}
+
+.icon {
+    font-size: 140px;
+
+    filter: drop-shadow(
+        8px 7px rgba(0, 0, 0, 0.15)
+    );
+}
+
+.temperature {
+    text-align: right;
+}
+
+.temperature div {
+    font-size: 88px;
+}
+
+.temperature p {
+    font-size: 36px;
+
+    margin-top: 10px;
+}
+
+/* Details */
+
+.details {
+    max-width: 650px;
+
+    margin: 20px auto 0;
+
+    padding-top: 18px;
+
+    border-top:
+        2px solid rgba(255, 255, 255, 0.35);
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    font-size: 22px;
+}
+
+/* Forecast */
+
+.forecast {
+    margin-top: 28px;
+
+    background:
+        rgba(45, 153, 220, 0.8);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.forecast h2 {
+    text-align: center;
+
+    font-size: 34px;
+
+    padding: 18px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.3);
+}
+
+.days {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+}
+
+.day {
+    min-height: 200px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 20px 8px;
+
+    border-left:
+        1px solid rgba(255, 255, 255, 0.25);
+}
+
+.day:last-child {
+    border-left: none;
+}
+
+.day b {
+    font-size: 23px;
+}
+
+.day span {
+    font-size: 55px;
+}
+
+.day strong {
+    font-size: 22px;
+}
+
+/* Bottom information */
+
+.information {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+
+    margin-top: 28px;
+}
+
+.info-box {
+    min-height: 145px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 25px 35px;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #2b9be0,
+        #1772ce
+    );
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.wind-box {
+    background: linear-gradient(
+        135deg,
+        #2675d1,
+        #164da8
+    );
+}
+
+.info-icon {
+    font-size: 60px;
+}
+
+.info-box p {
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.info-box strong {
+    font-size: 42px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .app {
+        width: 96%;
+        margin: 15px auto;
+    }
+
+    header {
+        height: 80px;
+        padding: 0 20px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .menu {
+        font-size: 35px;
+    }
+
+    .weather {
+        padding: 20px 15px 35px;
+    }
+
+    .weather h2 {
+        font-size: 40px;
+    }
+
+    .date {
+        font-size: 20px;
+    }
+
+    .main-weather {
+        gap: 15px;
+    }
+
+    .icon {
+        font-size: 80px;
+    }
+
+    .temperature div {
+        font-size: 55px;
+    }
+
+    .temperature p {
+        font-size: 25px;
+    }
+
+    .details {
+        font-size: 17px;
+    }
+
+    .days {
+        overflow-x: auto;
+
+        grid-template-columns:
+            repeat(5, 120px);
+    }
+
+    .information {
+        grid-template-columns: 1fr;
+    }
+
+    .search button {
+        padding: 0 15px;
+    }
+}
+/* Animation - App */
+.app {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Animation - Weather Icon */
+.icon {
+    animation: weatherIcon 2s ease-in-out infinite;
+}
+
+@keyframes weatherIcon {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+/* Animation - Temperature */
+.temperature {
+    animation: temperatureIn 1.5s ease;
+}
+
+@keyframes temperatureIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Animation - Forecast Cards */
+.day {
+    transition: transform 0.3s ease;
+}
+
+.day:hover {
+    transform: translateY(-10px);
+}
+/* Animation - Information Boxes */
+.info-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
